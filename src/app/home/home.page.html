@@ -1,13 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      This is a Name Roulette
+    <ion-title class="ion-text-center">
+      This is a Text Roulette
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-input placeholder="Enter Input"></ion-input>
-</ion-content>
+<ion-card>
+  <ion-card-content>
+    <ion-input placeholder="Ingrese nombres a sortear..." required type="text" [(ngModel)]="text"></ion-input>
+  </ion-card-content>
+</ion-card>
+<ion-row justify-content-around>
+  <ion-button (click)="sort()" expand="block">Sortear</ion-button>
+</ion-row>
 
-
+<ion-card>
+  <ion-card-content>
+    <ion-text>
+      <h1 class="ion-text-center">{{final}}</h1>
+    </ion-text>
+  </ion-card-content>
+</ion-card>
