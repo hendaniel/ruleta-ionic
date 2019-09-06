@@ -1,6 +1,8 @@
 {
   "name": "rulrule",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "91bd209d"
 }

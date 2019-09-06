@@ -1,1 +1,13 @@
 
+.input {
+    border: 1px solid var(--ion-color-primary);
+    --padding-start: 10px;
+    --padding-end: 10px;
+    border-radius: 10px;
+    color: var(--ion-color-medium);
+}
+
+.res{
+    color: var(--ion-color-success);
+    font-weight: bold;
+}
