@@ -7,23 +7,31 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
-        <ion-card-content>
-          <ion-textarea autoGrow="true" class="input" placeholder="Ingrese nombres a sortear..." required type="text" [(ngModel)]="text"></ion-textarea>
-        </ion-card-content>
-      
-      <ion-row justify-content-around>
-        <ion-button (click)="sort()" expand="block">Sortear</ion-button>
-      </ion-row>
-      
-      <ion-card>
-        <ion-card-content>
-          <ion-text>
-            <h1 class="ion-text-center res">{{final}}</h1>
-          </ion-text>
-        </ion-card-content>
-      </ion-card>
-</ion-card>
+  <ion-card>
+    <h1 class="help">Escriba nombres separados por una coma y sin espacios</h1>
+    <ion-card-content>
+      <ion-textarea
+        autoGrow="true"
+        class="input"
+        placeholder="Ingrese nombres a sortear..."
+        required
+        type="text"
+        [(ngModel)]="text"
+      ></ion-textarea>
+    </ion-card-content>
 
-<ion-img  [hidden]="sorprise" src="assets/gato.jpg"></ion-img>
+    <ion-row justify-content-around>
+      <ion-button (click)="sort()" expand="block">Sortear</ion-button>
+    </ion-row>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-text>
+          <h1 class="ion-text-center res">{{ final }}</h1>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+  </ion-card>
+
+  <ion-img [hidden]="sorprise" src="assets/gato.jpg"></ion-img>
 </ion-content>
