@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title class="ion-text-center">
+        THE ASSIGMENT
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+      <ion-card-content>
+        <ion-textarea
+          autoGrow="true"
+          class="input"
+          placeholder="Escriba nombres separados por una coma y sin espacios..."
+          required
+          type="text"
+          [(ngModel)]="text"
+        ></ion-textarea>
+      </ion-card-content>
+      <ion-card-content>
+          <ion-textarea
+            autoGrow="true"
+            class="input"
+            placeholder="Escriba actividades o tareas separados por una coma y sin espacios..."
+            required
+            type="text"
+            [(ngModel)]="people"
+          ></ion-textarea>
+        </ion-card-content>
+  
+      <ion-row justify-content-around>
+        <ion-button (click)="sort()" expand="block">Asignar</ion-button>
+      </ion-row>
+  
+      <ion-card>
+        <ion-card-content *ngIf="prueba!=null">
+          
+          <div *ngFor="let palabra of prueba">
+              <h1 class="ion-text-center res" >{{palabra}}</h1>
+          </div>
+            
+        
+        </ion-card-content>
+      </ion-card>
+    </ion-card>
+  
+    <ion-img [hidden]="sorprise" src="assets/gato.jpg"></ion-img>
+  </ion-content>
+  

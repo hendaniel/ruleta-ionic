@@ -1,23 +1,22 @@
-import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
-
+  selector: 'app-randomitem',
+  templateUrl: './randomitem.page.html',
+  styleUrls: ['./randomitem.page.scss'],
 })
+export class RandomitemPage implements OnInit {
 
-export class HomePage {
 
   text: string = "";
   elements: string[];
   final: string = "";
   sorprise = true;
-  constructor(public navCtrl: NavController) {
+  constructor() { }
 
+  ngOnInit() {
   }
+
   sort() {
     this.sorprise = true;
     if (this.text != null && this.text.trim() != '') {
@@ -37,4 +36,5 @@ export class HomePage {
     }
     console.log(this.elements);
   }
+
 }

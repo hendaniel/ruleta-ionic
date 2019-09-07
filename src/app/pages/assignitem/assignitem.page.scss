@@ -1,6 +1,6 @@
 
 .input {
-    border: 1px solid var(--ion-color-primary);
+    border: 0.5px solid var(--ion-color-medium);
     --padding-start: 10px;
     --padding-end: 10px;
     border-radius: 10px;
@@ -12,6 +12,6 @@
 }
 
 .res{
-    color: var(--ion-color-success);
+    color: var(--ion-color-medium);
     font-weight: bold;
 }
